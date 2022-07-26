@@ -1,0 +1,121 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+body,
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    color: $black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-container {
+    width: 100%;
+    max-width: 1199px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    display: block;
+}
+
+.dropdown-menu-custom {
+    a.dropdown-toggle.show {
+        .dropdown-icon {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    }
+
+    .dropdown-menu {
+        li {
+
+            a {
+                font-weight: 500;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                border-bottom: thin solid $lightGrey;
+
+                &:hover,
+                &:focus {
+                    background-color: $green;
+                    color: $white;
+                }
+            }
+
+            &:last-child {
+                a {
+                    @media (min-width: $lg) {
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.green-bg {
+
+    background-color: $green;
+}
+
+.yellow-bg {
+    background-color: $yellow;
+}
+
+.custom-btn {
+    border-radius: 10px;
+    border: thin solid $darkGrey;
+    padding: 15px 50px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.mt-60px {
+    margin-top: 60px;
+}
+
+.mb-60px {
+    margin-bottom: 60px;
+}
+
+.sec-title {
+    font-size: 22px;
+    line-height: 28px;
+    color: $darkBlue;
+    margin-bottom: 33px;
+
+    @media (min-width: $xl) {
+        font-size: 35px;
+        line-height: 44px;
+    }
+}
